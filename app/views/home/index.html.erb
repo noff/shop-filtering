@@ -1,0 +1,18 @@
+<h1>Каталог товаров</h1>
+
+<div class="well">
+  Тут будет форма фильтрации
+</div>
+
+<table class="table">
+<% @items.each do |item| %>
+  <tr class="<%= 'disabled' if !item.enable %>">
+    <td><%= '*' if item.is_popular %></td>
+    <td><%= item.name %></td>
+    <td><%= item.category.name %></td>
+    <td><%= item.price %> РУБ.</td>
+    <td><%= item.price %> РУБ.</td>
+    <td><%= 'на заказ' if item.on_order %></td>
+  </tr>
+<% end %>
+</table>
