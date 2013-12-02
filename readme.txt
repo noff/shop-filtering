@@ -1,7 +1,0 @@
-cd ~/Projects
-git clone git@github.com:noff/shop-filtering.git
-cd shop-filtering
-bundle
-rake db:migrate
-rake db:seed
-rails s
